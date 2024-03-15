@@ -15,7 +15,7 @@ const HeroSlider = () => {
 
   return (
     <>
-      <div className="absolute w-full h-full top-0 flex justify-center flex-col text-white ">
+      <div className="absolute z-10 w-full h-full top-0 flex justify-center flex-col text-white ">
         <div className="max-w-[90%] mx-auto md:absolute md:left-10 md:bottom-6 md:max-w-[400px]">
           <div className="flex gap-2 mt-56">
             <div
