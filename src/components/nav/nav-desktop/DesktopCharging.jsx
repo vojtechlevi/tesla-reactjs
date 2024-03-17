@@ -29,13 +29,15 @@ const DesktopCharging = ({ activeMenu, setActiveMenu, className }) => {
     <>
       <div
         onMouseEnter={() => setActiveMenu(false)}
-        className={`absolute top-0 z-10 left-0 w-full h-screen transform transition-all duration-400 ease-in-out ${
+        className={`absolute top-0 left-0 w-full h-screen transform transition-all duration-400 ease-in-out ${
           activeMenu || isTransitioning ? "backdrop-blur-sm" : ""
         }`}
       ></div>
       <div
         onMouseLeave={() => setActiveMenu(false)}
-        className={`absolute top-0 left-0 w-full h-1/2 bg-white flex justify-center items-center z-20 transform transition-opacity duration-500 ease-in-out ${className}`}
+        className={`absolute top-0 left-0 w-full h-1/2 flex justify-center items-center transform transition-opacity duration-500 ease-in-out ${className} ${
+          activeMenu === "charging" ? "z-20" : "z-0"
+        }`}
       >
         <div className={`flex px-4 gap-4 flex-wrap w-[620px]`}>
           <ItemCard

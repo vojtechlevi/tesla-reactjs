@@ -6,10 +6,9 @@ import { useMenu } from "../hooks/MenuHook";
 const Home = () => {
   const { menu } = useMenu();
 
-  console.log(menu);
   return (
     <>
-      <div className={` ${menu ? "hidden" : ""}`}>
+      <div className={` -z-10 ${menu ? "hidden" : ""}`}>
         <div className="w-full h-screen flex items-center justify-center ">
           <video
             className="w-full h-full object-cover"

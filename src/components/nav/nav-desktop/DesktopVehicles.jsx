@@ -30,46 +30,52 @@ const DesktopVehicles = ({ activeMenu, setActiveMenu, className }) => {
     <>
       <div
         onMouseEnter={() => setActiveMenu(false)}
-        className={`absolute top-0 z-10 left-0 w-full h-screen transform transition-all duration-400 ease-in-out ${
+        className={`absolute top-0 left-0 w-full h-screen transform transition-all duration-400 ease-in-out ${
           activeMenu || isTransitioning ? "backdrop-blur-sm" : ""
         }`}
       ></div>
       <div
         onMouseLeave={() => setActiveMenu(false)}
-        className={`absolute top-0 left-0 w-full h-1/2  flex justify-center items-center z-20 transform transition-all duration-500 ease-in-out ${className}`}
+        className={`absolute top-0 left-0 w-full h-52 mt-52  flex justify-center items-center transform transition-all duration-500 ease-in-out ${className} ${
+          activeMenu === "vehicles" ? "z-20" : "z-0"
+        }`}
       >
         <div className={`flex px-4 gap-4 flex-wrap w-[620px] `}>
-          <Link to="/models">
-            <ItemCard
-              className={`${animate ? "do-animation" : "opacity-0"}`}
-              title="Model S"
-              imageLink="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Vehicles-Model-S.png"
-            />
-          </Link>
+          <ItemCard
+            className={`${animate ? "do-animation" : "opacity-0"}`}
+            title="Model S"
+            pageLink="/modelS"
+            imageLink="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Vehicles-Model-S.png"
+          />
           <ItemCard
             className={`${animate ? "do-animation-2" : "opacity-0"}`}
             title="Model 3"
             imageLink="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Vehicles-Model-3-LHD.png"
+            pageLink="/model3"
           />
           <ItemCard
             className={`${animate ? "do-animation-3" : "opacity-0"}`}
             title="Model X"
             imageLink="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Vehicles-Model-X.png"
+            pageLink="/modelx"
           />
           <ItemCard
             className={`${animate ? "do-animation-4" : "opacity-0"}`}
             title="Model Y"
             imageLink="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Vehicles-Model-Y.png"
+            pageLink="/modely"
           />
           <ItemCard
             className={`${animate ? "do-animation-5" : "opacity-0"}`}
             title="Cybertruck"
             imageLink="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Vehicles-Cybertruck-1x.png"
+            pageLink="/cybertruck"
           />
           <ItemCard
             className={`${animate ? "do-animation-6" : "opacity-0"}`}
             title="Help Me Choose"
             imageLink="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Vehicles-HMC-RedBlue-LHD.png"
+            pageLink="/choose"
           />
         </div>
         <div className="w-[1px] h-80 bg-gray-400 mx-10"></div>

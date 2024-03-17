@@ -25,10 +25,11 @@ const MobileVehicles = ({
           setSelectedItem={setSelectedItem}
         />
         <div className={`flex px-4 flex-wrap justify-center `}>
-          <Link to="/models" onClick={toggleMenu}>
+          <Link onClick={toggleMenu}>
             <ItemCard
               title="Model S"
               imageLink="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Vehicles-Model-S.png"
+              pageLink="/modelS"
             />
           </Link>
           <ItemCard
