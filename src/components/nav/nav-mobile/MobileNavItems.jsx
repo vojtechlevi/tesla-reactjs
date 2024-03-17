@@ -29,30 +29,33 @@ const MobileNavItems = ({ menu, toggleMenu }) => {
       ) : selectedItem === 2 ? (
         <MobileEnergy
           menu={menu}
-          setMenu={toggleMenu}
+          toggleMenu={toggleMenu}
+          selectedItem={selectedItem}
           setSelectedItem={setSelectedItem}
         />
       ) : selectedItem === 3 ? (
         <MobileCharging
           menu={menu}
-          setMenu={toggleMenu}
+          toggleMenu={toggleMenu}
+          selectedItem={selectedItem}
           setSelectedItem={setSelectedItem}
         />
       ) : selectedItem === 4 ? (
         <MobileDiscover
           menu={menu}
-          setMenu={toggleMenu}
+          toggleMenu={toggleMenu}
+          selectedItem={selectedItem}
           setSelectedItem={setSelectedItem}
         />
       ) : (
         <div
-          className={`w-full h-screen absolute top-0 left-0 z-30 bg-white transform transition-opacity duration-500 ease-in-out lg:hidden ${
-            menu ? "opacity-100" : "opacity-0" //why is this not working?
+          className={`w-full h-screen absolute top-0 left-0 z-40 bg-white transform transition-opacity duration-500 ease-in-out lg:hidden ${
+            menu ? "opacity-100" : "opacity-0"
           }`}
         >
           <button
             onClick={toggleMenu}
-            className="absolute right-10 top-4 hover:bg-black/10 p-1 rounded active:border active:border-slate-950 "
+            className="absolute right-7 top-4 hover:bg-black/10 p-1 rounded active:border active:border-slate-950 "
           >
             <X />
           </button>

@@ -1,9 +1,11 @@
 import React from "react";
 
-const ItemCard = ({ title, imageLink }) => {
+const ItemCard = ({ title, imageLink, className }) => {
   return (
     <>
-      <div className="flex flex-col justify-center items-center mt-4 w-[180px]">
+      <div
+        className={`flex flex-col justify-center items-center mt-4 w-[180px] transform transition-all duration-500 ease-in-out ${className} `}
+      >
         <img
           className="w-full h-full object-contain"
           src={imageLink}

@@ -1,25 +1,29 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import ItemNav from "../ItemNav";
 import ItemCard from "../ItemCard";
 import ItemLinks from "../ItemLinks";
 
-const MobileEnergy = ({ menu, setMenu, setSelectedItem }) => {
+const MobileEnergy = ({ menu, toggleMenu, selectedItem, setSelectedItem }) => {
   return (
     <>
       <div
-        className={`absolute w-full h-screen top-0 z-10 left-0 bg-white overflow-scroll`}
+        className={`absolute w-full h-screen top-0 z-50 left-0 bg-white overflow-scroll`}
       >
         <ItemNav
-          title="Vehicles"
+          title="Energy"
           menu={menu}
-          setMenu={setMenu}
+          toggleMenu={toggleMenu}
           setSelectedItem={setSelectedItem}
         />
         <div className={`flex px-4 flex-wrap justify-center `}>
-          <ItemCard
-            title="Solar Panels"
-            imageLink="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Energy-Solar-Panels.png"
-          />
+          <Link to="/" onClick={toggleMenu}>
+            <ItemCard
+              title="Solar Panels"
+              imageLink="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Energy-Solar-Panels.png"
+            />
+          </Link>
           <ItemCard
             title="Solar Roof"
             imageLink="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Energy-Solar-Roof.png"

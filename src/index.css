@@ -1,3 +1,59 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.do-animation {
+  opacity: 0;
+  animation: fadeIn ease-in-out 100ms forwards;
+  animation-delay: 0.2s;
+}
+
+.do-animation-2 {
+  opacity: 0;
+  animation: fadeIn ease-in-out 100ms forwards;
+  animation-delay: 0.3s;
+}
+.do-animation-3 {
+  opacity: 0;
+  animation: fadeIn ease-in-out 100ms forwards;
+  animation-delay: 0.4s;
+}
+.do-animation-4 {
+  opacity: 0;
+  animation: fadeIn ease-in-out 100ms forwards;
+  animation-delay: 0.5s;
+}
+.do-animation-5 {
+  opacity: 0;
+  animation: fadeIn ease-in-out 100ms forwards;
+  animation-delay: 0.6s;
+}
+.do-animation-6 {
+  opacity: 0;
+  animation: fadeIn ease-in-out 100ms forwards;
+  animation-delay: 0.7s;
+}
+.do-animation-7 {
+  opacity: 0;
+  animation: fadeIn ease-in-out 100ms forwards;
+  animation-delay: 0.8s;
+}
+.do-animation-8 {
+  opacity: 0;
+  animation: fadeIn ease-in-out 100ms forwards;
+  animation-delay: 0.9s;
+}
+.do-animation-9 {
+  opacity: 0;
+  animation: fadeIn ease-in-out 100ms forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

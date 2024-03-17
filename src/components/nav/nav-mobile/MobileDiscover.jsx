@@ -1,22 +1,31 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import ItemNav from "../ItemNav";
 import ItemLinks from "../ItemLinks";
 
-const MobileDiscover = ({ menu, setMenu, setSelectedItem }) => {
+const MobileDiscover = ({
+  menu,
+  toggleMenu,
+  selectedItem,
+  setSelectedItem,
+}) => {
   return (
     <>
       <div
-        className={`absolute w-full h-screen top-0 z-10 left-0 bg-white overflow-scroll`}
+        className={`absolute w-full h-screen top-0 z-50 left-0 bg-white overflow-scroll`}
       >
         <ItemNav
           title="Discover"
           menu={menu}
-          setMenu={setMenu}
+          toggleMenu={toggleMenu}
           setSelectedItem={setSelectedItem}
         />
         <div className={`flex px-4 flex-wrap justify-center `}>
           <div className="w-full gap-6 flex flex-col mb-10 mt-4">
-            <ItemLinks title="Demo Drive" />
+            <Link to="/models" onClick={toggleMenu}>
+              <ItemLinks title="Demo Drive" />
+            </Link>
             <ItemLinks title="Insurance" />
             <ItemLinks title="Video Guides" />
             <ItemLinks title="Customer Stories" />

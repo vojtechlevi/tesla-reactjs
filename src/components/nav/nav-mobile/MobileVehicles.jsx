@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import ItemNav from "../ItemNav";
 import ItemCard from "../ItemCard";
 import ItemLinks from "../ItemLinks";
-import { Link } from "react-router-dom";
 
 const MobileVehicles = ({
   menu,
@@ -13,14 +14,14 @@ const MobileVehicles = ({
   return (
     <>
       <div
-        className={`absolute w-full h-screen top-0 z-10 left-0 bg-white overflow-scroll ${
+        className={`absolute w-full h-screen top-0 z-50 left-0 bg-white overflow-scroll ${
           selectedItem === 1 ? "opacity-100" : "opacity-0" ////why is this not working?
         }`}
       >
         <ItemNav
           title="Vehicles"
           menu={menu}
-          setMenu={toggleMenu}
+          toggleMenu={toggleMenu}
           setSelectedItem={setSelectedItem}
         />
         <div className={`flex px-4 flex-wrap justify-center `}>

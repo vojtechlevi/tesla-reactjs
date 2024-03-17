@@ -1,16 +1,11 @@
 import React from "react";
 import { ChevronLeft, X } from "lucide-react";
 
-const ItemNav = ({ title, menu, setMenu, setSelectedItem }) => {
+const ItemNav = ({ title, toggleMenu, setSelectedItem }) => {
   const handleItem = (i) => {
     setSelectedItem(i);
   };
-  const handleMenu = () => {
-    setMenu(!menu);
-    if (menu) {
-      handleItem(null);
-    }
-  };
+
   return (
     <>
       <div className={`flex justify-between items-center p-4 `}>
@@ -22,7 +17,7 @@ const ItemNav = ({ title, menu, setMenu, setSelectedItem }) => {
         </button>
         <h2 className="text-sm">{title}</h2>
         <button
-          onClick={handleMenu}
+          onClick={toggleMenu}
           className=" hover:bg-black/10 p-1 rounded  "
         >
           <X />
