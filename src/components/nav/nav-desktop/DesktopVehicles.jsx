@@ -1,6 +1,5 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import ItemCard from "../ItemCard";
 import ItemLinks from "../ItemLinks";
 
@@ -30,48 +29,54 @@ const DesktopVehicles = ({ activeMenu, setActiveMenu, className }) => {
     <>
       <div
         onMouseEnter={() => setActiveMenu(false)}
-        className={`absolute top-0 left-0 w-full h-screen transform transition-all duration-400 ease-in-out ${
+        className={`absolute z-10 top-0 left-0 w-full h-screen transform transition-all duration-600 ease-in-out ${
           activeMenu || isTransitioning ? "backdrop-blur-sm" : ""
         }`}
       ></div>
       <div
         onMouseLeave={() => setActiveMenu(false)}
-        className={`absolute top-0 left-0 w-full h-52 mt-52  flex justify-center items-center transform transition-all duration-500 ease-in-out ${className} ${
+        className={`absolute top-0 left-0 w-full  h-1/2 flex justify-center items-center transform transition-all duration-500 ease-in-out ${className} ${
           activeMenu === "vehicles" ? "z-20" : "z-0"
         }`}
       >
-        <div className={`flex px-4 gap-4 flex-wrap w-[620px] `}>
+        <div className={`flex gap-4 flex-wrap w-[620px] mb-10 `}>
           <ItemCard
+            setActiveMenu={setActiveMenu}
             className={`${animate ? "do-animation" : "opacity-0"}`}
             title="Model S"
             pageLink="/modelS"
             imageLink="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Vehicles-Model-S.png"
           />
           <ItemCard
+            setActiveMenu={setActiveMenu}
             className={`${animate ? "do-animation-2" : "opacity-0"}`}
             title="Model 3"
             imageLink="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Vehicles-Model-3-LHD.png"
             pageLink="/model3"
           />
           <ItemCard
+            setActiveMenu={setActiveMenu}
             className={`${animate ? "do-animation-3" : "opacity-0"}`}
             title="Model X"
             imageLink="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Vehicles-Model-X.png"
-            pageLink="/modelx"
+            pageLink="/modelX"
           />
           <ItemCard
+            setActiveMenu={setActiveMenu}
             className={`${animate ? "do-animation-4" : "opacity-0"}`}
             title="Model Y"
             imageLink="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Vehicles-Model-Y.png"
-            pageLink="/modely"
+            pageLink="/modelY"
           />
           <ItemCard
+            setActiveMenu={setActiveMenu}
             className={`${animate ? "do-animation-5" : "opacity-0"}`}
             title="Cybertruck"
             imageLink="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Vehicles-Cybertruck-1x.png"
             pageLink="/cybertruck"
           />
           <ItemCard
+            setActiveMenu={setActiveMenu}
             className={`${animate ? "do-animation-6" : "opacity-0"}`}
             title="Help Me Choose"
             imageLink="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Vehicles-HMC-RedBlue-LHD.png"
@@ -82,40 +87,58 @@ const DesktopVehicles = ({ activeMenu, setActiveMenu, className }) => {
 
         <div className="w-52 gap-2 flex flex-col text-xs">
           <ItemLinks
-            title="Inventory"
+            setActiveMenu={setActiveMenu}
             className={`${animate ? "do-animation" : "opacity-0"}`}
+            title="Inventory"
+            pageLink="/new"
           />
           <ItemLinks
-            title="Used Cars"
+            setActiveMenu={setActiveMenu}
             className={`${animate ? "do-animation-2" : "opacity-0"}`}
+            title="Used Cars"
+            pageLink="/used"
           />
           <ItemLinks
-            title="Demo Drive"
+            setActiveMenu={setActiveMenu}
             className={`${animate ? "do-animation-3" : "opacity-0"}`}
+            title="Demo Drive"
+            pageLink="/drive"
           />
           <ItemLinks
-            title="Trade-in"
+            setActiveMenu={setActiveMenu}
             className={`${animate ? "do-animation-4" : "opacity-0"}`}
+            title="Trade-in"
+            pageLink="/tradein"
           />
           <ItemLinks
-            title="Compare"
+            setActiveMenu={setActiveMenu}
             className={`${animate ? "do-animation-5" : "opacity-0"}`}
+            title="Compare"
+            pageLink="/compare"
           />
           <ItemLinks
-            title="Help Me Charge"
+            setActiveMenu={setActiveMenu}
             className={`${animate ? "do-animation-6" : "opacity-0"}`}
+            title="Help Me Charge"
+            pageLink="/charge"
           />
           <ItemLinks
-            title="Fleet"
+            setActiveMenu={setActiveMenu}
             className={`${animate ? "do-animation-7" : "opacity-0"}`}
+            title="Fleet"
+            pageLink="/fleet"
           />
           <ItemLinks
-            title="Semi"
+            setActiveMenu={setActiveMenu}
             className={`${animate ? "do-animation-8" : "opacity-0"}`}
+            title="Semi"
+            pageLink="/semi"
           />
           <ItemLinks
-            title="Roadster"
+            setActiveMenu={setActiveMenu}
             className={`${animate ? "do-animation-9" : "opacity-0"}`}
+            title="Roadster"
+            pageLink="/roadster"
           />
         </div>
       </div>

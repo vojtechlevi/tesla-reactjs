@@ -1,26 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ItemCard = ({ title, imageLink, pageLink, className }) => {
+const ItemCard = ({ title, imageLink, pageLink, className, setActiveMenu }) => {
   return (
     <>
       <div
-        className={`flex flex-col justify-center items-center mt-4 w-[180px] transform transition-all duration-500 ease-in-out ${className} `}
+        className={`flex flex-col justify-center items-center my-4 mx-auto w-[180px] transform transition-all duration-500 ease-in-out ${className} `}
       >
-        <Link to={pageLink}>
-          <img
-            className="w-full h-full object-contain"
-            src={imageLink}
-            alt={title}
-            srcset=""
-          />
-        </Link>
-        <h3>{title}</h3>
-        <div className="flex gap-2 text-sm">
+        <div onClick={() => setActiveMenu(false)} className="text-center">
           <Link to={pageLink}>
-            <p>Learn</p>
+            <img
+              className="w-full h-full object-contain"
+              src={imageLink}
+              alt={title}
+              srcset=""
+            />
           </Link>
-          <p>Order</p>
+          <h3>{title}</h3>
+          <div className="flex gap-2 text-sm text-center justify-center">
+            <Link to={pageLink}>
+              <p>Learn</p>
+            </Link>
+            <p>Order</p>
+          </div>
         </div>
       </div>
     </>
