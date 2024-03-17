@@ -1,11 +1,23 @@
-import { useState } from "react";
+import React, { createContext, useContext, useState } from "react";
 
-export const useMenu = () => {
+const MenuContext = createContext();
+
+export const MenuProvider = ({ children }) => {
   const [menu, setMenu] = useState(false);
 
   const toggleMenu = () => {
-    setMenu((prevMenu) => !prevMenu);
+    setTimeout(() => {
+      setMenu((prevMenu) => !prevMenu);
+    }, 500);
   };
 
-  return { menu, toggleMenu };
+  return (
+    <MenuContext.Provider value={{ menu, toggleMenu }}>
+      {children}
+    </MenuContext.Provider>
+  );
+};
+
+export const useMenu = () => {
+  return useContext(MenuContext);
 };

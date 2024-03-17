@@ -1,11 +1,16 @@
 import React from "react";
 import HeroSlider from "./HeroSlider";
 
+import { useMenu } from "../hooks/MenuHook";
+
 const Home = () => {
+  const { menu } = useMenu();
+
+  console.log(menu);
   return (
     <>
-      <div>
-        <div className="w-full h-screen flex items-center justify-center">
+      <div className={` ${menu ? "hidden" : ""}`}>
+        <div className="w-full h-screen flex items-center justify-center ">
           <video
             className="w-full h-full object-cover"
             autoPlay
@@ -22,14 +27,14 @@ const Home = () => {
             alt=""
             srcset=""
           />
-          <div className=" absolute w-full h-full top-0 flex justify-end items-center flex-col">
-            <div className=" flex flex-col justify-center items-center mb-[320px] md:mb-[380px]">
+          <div className=" absolute w-full h-full top-0 flex justify-between items-center flex-col">
+            <div className=" absolute top-44 xl:top-36 2xl:top-20 flex flex-col justify-center items-center">
               <h2 className="text-5xl font-normal">Model Y</h2>
               <p className="text-lg font-medium">From $36,490*</p>
               <p className="text-xs">After Federal Tax Credit</p>
             </div>
-            <div className="mb-14 max-w-[90%]">
-              <div className="text-sm flex flex-col md:flex-row justify-center items-center mb-10 w-full">
+            <div className=" absolute bottom-20 max-w-[90%]">
+              <div className="text-sm flex flex-col md:flex-row justify-center items-center mb-4 w-full">
                 <button className="bg-slate-50 p-2 px-8 rounded font-medium text-md w-full">
                   Shop Available
                 </button>
@@ -52,13 +57,13 @@ const Home = () => {
             srcset=""
           />
           <div className=" absolute w-full h-full top-0 flex justify-end items-center flex-col">
-            <div className=" flex flex-col justify-center items-center mb-[320px] md:mb-[350px]">
+            <div className="absolute top-44 xl:top-36 2xl:top-20 flex flex-col justify-center items-center">
               <h2 className="text-3xl font-light">Reengineered</h2>
               <p className="text-5xl font-medium">Model 3</p>
               <p className="text-lg font-light">Lease starting at $329/mo*</p>
             </div>
-            <div className="mb-14 max-w-[90%]">
-              <div className="text-sm flex flex-col md:flex-row justify-center items-center mb-10 w-full">
+            <div className="absolute bottom-20 max-w-[90%]">
+              <div className="text-sm flex flex-col md:flex-row justify-center items-center w-full">
                 <button className="bg-slate-200 p-2 px-8 rounded font-medium text-md w-full">
                   Custom Order
                 </button>
@@ -81,14 +86,14 @@ const Home = () => {
             srcset=""
           />
           <div className=" absolute w-full h-full top-0 flex justify-end items-center flex-col">
-            <div className=" flex flex-col justify-center items-center mb-[310px] md:mb-[350px]">
+            <div className="absolute top-44 xl:top-36 2xl:top-20 flex flex-col justify-center items-center">
               <h2 className="text-5xl font-normal">Model X</h2>
               <p className="text-lg font-medium">From $68,590*</p>
               <p className="text-xs">
                 After Federal Tax Credit & Est. Gas Savings
               </p>
             </div>
-            <div className="mb-14 max-w-[90%]">
+            <div className="absolute bottom-20 max-w-[90%]">
               <div className="text-sm flex flex-col md:flex-row justify-center items-center mb-10 w-full">
                 <button className="bg-slate-50 p-2 px-8 rounded font-medium text-md w-full">
                   Custom Order
@@ -115,12 +120,12 @@ const Home = () => {
             srcset=""
           />
           <div className=" absolute w-full h-full top-0 flex justify-end items-center flex-col">
-            <div className=" flex flex-col justify-center items-center mb-[310px] md:mb-[350px]">
+            <div className="absolute top-44 xl:top-36 2xl:top-20 flex flex-col justify-center items-center">
               <h2 className="text-5xl font-normal">Model S</h2>
               <p className="text-lg font-medium">From $71,090*</p>
               <p className="text-xs">After Est. Gas Savings</p>
             </div>
-            <div className="mb-14 max-w-[90%]">
+            <div className="absolute bottom-20 max-w-[90%]">
               <div className="text-sm flex flex-col md:flex-row justify-center items-center mb-10 w-full">
                 <button className="bg-slate-50 p-2 px-8 rounded font-medium text-md w-full">
                   Custom Order
@@ -147,7 +152,7 @@ const Home = () => {
             srcset=""
           />
           <div className=" absolute w-full h-full top-0 flex justify-end items-center flex-col">
-            <div className="mb-14 w-[90%]">
+            <div className="absolute bottom-20 max-w-[90%]">
               <div className="text-sm flex flex-col md:flex-row justify-center items-center mb-10 w-full">
                 <button className="bg-slate-50 p-2 px-8 rounded font-medium text-md w-full md:w-[300px]">
                   Order Now
@@ -167,13 +172,13 @@ const Home = () => {
             srcset=""
           />
           <div className=" absolute w-full h-full top-0 flex justify-end items-center flex-col">
-            <div className=" flex flex-col justify-center items-center mb-[310px] md:mb-[350px]">
+            <div className="absolute top-44 xl:top-36 2xl:top-20 flex flex-col justify-center items-center">
               <h2 className="text-4xl text-white font-normal">Solar Panels</h2>
               <p className="text-md text-white underline font-thin ">
                 Schedule a Virtual Consultation
               </p>
             </div>
-            <div className="mb-14 w-[90%]">
+            <div className="absolute bottom-20 max-w-[90%]">
               <div className="text-sm flex flex-col md:flex-row justify-center items-center mb-10 w-full">
                 <button className="bg-slate-50 p-2 px-8 rounded font-medium text-md w-full md:w-[200px]">
                   Order Now
@@ -193,13 +198,13 @@ const Home = () => {
             srcset=""
           />
           <div className=" absolute w-full h-full top-0 flex justify-end items-center flex-col">
-            <div className=" flex flex-col justify-center items-center mb-[310px] md:mb-[350px]">
+            <div className=" absolute top-44 xl:top-36 2xl:top-20 flex flex-col justify-center items-center">
               <h2 className="text-4xl font-normal">Solar Roof</h2>
               <p className="text-md font-thin ">
                 Produce Clean Energy From Your Roof
               </p>
             </div>
-            <div className="mb-14 w-[90%]">
+            <div className="absolute bottom-20 max-w-[90%]">
               <div className="text-sm flex flex-col md:flex-row justify-center items-center mb-10 w-full">
                 <button className="bg-slate-50 p-2 px-8 rounded font-medium text-md w-full md:w-[200px]">
                   Order Now
@@ -219,10 +224,10 @@ const Home = () => {
             srcset=""
           />
           <div className=" absolute w-full h-full top-0 flex justify-end items-center flex-col">
-            <div className=" flex flex-col justify-center items-center mb-[310px]">
+            <div className="absolute top-44 xl:top-36 2xl:top-20 flex flex-col justify-center items-center">
               <h2 className="text-4xl font-normal">Powerwall</h2>
             </div>
-            <div className="mb-14 w-[90%]">
+            <div className="absolute bottom-20 max-w-[90%]">
               <div className="text-sm flex flex-col md:flex-row justify-center items-center mb-10 w-full">
                 <button className="bg-slate-50 p-2 px-8 rounded font-medium text-md w-full md:w-[200px]">
                   Order Now
@@ -242,10 +247,10 @@ const Home = () => {
             srcset=""
           />
           <div className=" absolute w-full h-full top-0 flex justify-end items-center flex-col">
-            <div className=" flex flex-col justify-center items-center mb-[430px]">
+            <div className="absolute top-44 xl:top-36 2xl:top-20 flex flex-col justify-center items-center">
               <h2 className="text-4xl font-normal">Accessories</h2>
             </div>
-            <div className="mb-14 w-[90%]">
+            <div className="absolute bottom-20 max-w-[90%]">
               <div className="text-sm flex flex-col md:flex-row justify-center items-center mb-10 w-full">
                 <button className="bg-slate-50 p-2 px-8 rounded font-medium text-md w-full md:w-[200px]">
                   Shop Now
