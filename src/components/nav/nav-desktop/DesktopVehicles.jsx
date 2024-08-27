@@ -35,12 +35,13 @@ const DesktopVehicles = ({ activeMenu, setActiveMenu, className }) => {
       ></div>
       <div
         onMouseLeave={() => setActiveMenu(false)}
-        className={`absolute top-0 left-0 w-full  h-1/2 flex justify-center items-center transform transition-all duration-500 ease-in-out ${className} ${
+        className={`absolute top-0 left-0 w-full h-2/3 flex justify-center items-center transform transition-all duration-500 ease-in-out ${className} ${
           activeMenu === "vehicles" ? "z-20" : "z-0"
         }`}
       >
-        <div className={`flex gap-4 flex-wrap w-[620px] mb-10 `}>
+        <div className={`flex gap-4 flex-wrap w-[620px] mb-10  `}>
           <ItemCard
+            activeMenu={activeMenu}
             setActiveMenu={setActiveMenu}
             className={`${animate ? "do-animation" : "opacity-0"}`}
             title="Model S"
@@ -83,9 +84,9 @@ const DesktopVehicles = ({ activeMenu, setActiveMenu, className }) => {
             pageLink="/choose"
           />
         </div>
-        <div className="w-[1px] h-80 bg-gray-400 mx-10"></div>
+        <div className="w-[1px] h-80 bg-gray-400 mx-20"></div>
 
-        <div className="w-52 gap-2 flex flex-col text-xs">
+        <div className="w-52 my-20 gap-2 flex flex-col text-xs">
           <ItemLinks
             setActiveMenu={setActiveMenu}
             className={`${animate ? "do-animation" : "opacity-0"}`}

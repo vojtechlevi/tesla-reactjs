@@ -36,7 +36,7 @@ const DesktopEnergy = ({ activeMenu, setActiveMenu, className }) => {
       ></div>
       <div
         onMouseLeave={() => setActiveMenu(false)}
-        className={`absolute top-0 left-0 w-full h-1/2  flex justify-center  items-center transform transition-all duration-500 ease-in-out ${className} ${
+        className={`absolute top-0 left-0 w-full h-2/3 flex justify-center  items-center transform transition-all duration-500 ease-in-out ${className} ${
           activeMenu === "energy" ? "z-20" : "z-0"
         }`}
       >

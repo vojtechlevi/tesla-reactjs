@@ -62,7 +62,7 @@ const Home = () => {
               <p className="text-lg font-light">Lease starting at $329/mo*</p>
             </div>
             <div className="absolute bottom-20 max-w-[90%]">
-              <div className="text-sm flex flex-col md:flex-row justify-center items-center w-full">
+              <div className="text-sm flex flex-col md:flex-row justify-center items-center mb-4  w-full">
                 <button className="bg-slate-200 p-2 px-8 rounded font-medium text-md w-full">
                   Custom Order
                 </button>

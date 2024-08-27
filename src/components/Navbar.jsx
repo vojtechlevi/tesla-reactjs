@@ -28,7 +28,7 @@ const Navbar = () => {
             TESLA
           </h2>
         </Link>
-        <div className={`gap-2 hidden lg:flex  `}>
+        <div className={`hidden lg:flex  `}>
           <p
             onMouseEnter={() => setActiveMenu("vehicles")}
             className={`relative cursor-pointer hover:bg-gray-500/10 p-2 px-4 rounded transform transition-bg duration-500`}
@@ -37,20 +37,20 @@ const Navbar = () => {
           </p>
           <p
             onMouseEnter={() => setActiveMenu("energy")}
-            className="relative cursor-pointer hover:bg-gray-500/10 p-2 rounded transform transition-bg duration-500"
+            className="relative cursor-pointer hover:bg-gray-500/10 p-2 px-4 rounded transform transition-bg duration-500"
           >
             Energy
           </p>
           <p
             onMouseEnter={() => setActiveMenu("charging")}
-            className="relative cursor-pointer hover:bg-gray-500/10 p-2 rounded"
+            className="relative cursor-pointer hover:bg-gray-500/10 p-2 px-4 rounded transform transition-bg duration-500"
           >
             Charging
           </p>
-          <p className="relative cursor-pointer hover:bg-gray-500/10 p-2 rounded">
+          <p className="relative cursor-pointer hover:bg-gray-500/10 p-2 px-4 rounded">
             Discover
           </p>
-          <p className="relative cursor-pointer hover:bg-gray-500/10 p-2 rounded">
+          <p className="relative cursor-pointer hover:bg-gray-500/10 p-2 px-4 rounded">
             Shop
           </p>
         </div>
@@ -112,7 +112,7 @@ const Navbar = () => {
       <div
         className={` ${
           activeMenu
-            ? "w-full h-1/2 absolute top-0 left-0 bg-white z-10"
+            ? "w-full h-2/3 absolute top-0 left-0 bg-white z-10"
             : "hidden"
         }`}
       ></div>

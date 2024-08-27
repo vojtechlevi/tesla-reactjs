@@ -35,7 +35,7 @@ const DesktopCharging = ({ activeMenu, setActiveMenu, className }) => {
       ></div>
       <div
         onMouseLeave={() => setActiveMenu(false)}
-        className={`absolute top-0 left-0 w-full h-1/2 flex justify-center items-center transform transition-opacity duration-500 ease-in-out ${className} ${
+        className={`absolute top-0 left-0 w-full h-2/3 flex justify-center items-center transform transition-opacity duration-500 ease-in-out ${className} ${
           activeMenu === "charging" ? "z-20" : "z-0"
         }`}
       >
