@@ -13,6 +13,7 @@ const Home = () => {
           <video
             className="w-full h-full object-cover"
             autoPlay
+            playsInline
             loop
             muted
             src="https://digitalassets.tesla.com/tesla-contents/video/upload/f_auto/Homepage-Model-Y-Promo-Desktop-v2.mp4"
